@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  responsed_detetime: 2015-01-15 02:07:36
+  User_id: 
+  contents: MyText
+
+two:
+  responsed_detetime: 2015-01-15 02:07:36
+  User_id: 
+  contents: MyText
