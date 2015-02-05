@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :depts
+
+  resources :users
+
   resources :responses
 
   root to:redirect('/inquiries')

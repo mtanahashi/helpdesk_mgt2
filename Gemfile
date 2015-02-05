@@ -44,3 +44,5 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# I18nのgemを追加する
+gem "i18n_generators", :group => :development

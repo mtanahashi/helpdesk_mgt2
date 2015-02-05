@@ -69,6 +69,6 @@ class ResponsesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def response_params
-      params.require(:response).permit(:responsed_detetime, :User_id, :contents)
+      params.require(:response).permit(:responsed_detetime, :user_id, :contents, :inquiry_id)
     end
 end

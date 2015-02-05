@@ -16,9 +16,9 @@
     <% @inquiries.each do |inquiry| %>
       <tr>
         <td><%= inquiry.accepted_datetime %></td>
-        <td><%= inquiry.User %></td>
+        <td><%= inquiry.user_id %></td>
         <td><%= inquiry.inquired_person %></td>
-        <td><%= inquiry.Dept %></td>
+        <td><%= inquiry.dept_id %></td>
         <td><%= inquiry.contents %></td>
         <td><%= link_to 'Show', inquiry %></td>
         <td><%= link_to 'Edit', edit_inquiry_path(inquiry) %></td>

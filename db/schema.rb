@@ -11,20 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150115020736) do
+ActiveRecord::Schema.define(version: 20150205024854) do
 
-  create_table "inquiries", force: true do |t|
-    t.datetime "accepted_datetime"
-    t.integer  "User_id"
-    t.string   "inquired_person"
-    t.integer  "Dept_id"
-    t.text     "contents"
+  create_table "depts", force: true do |t|
+    t.string   "code"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "inquiries", ["Dept_id"], name: "index_inquiries_on_Dept_id"
-  add_index "inquiries", ["User_id"], name: "index_inquiries_on_User_id"
+  create_table "inquiries", force: true do |t|
+    t.datetime "accepted_datetime"
+    t.string   "inquired_person"
+    t.text     "contents"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.integer  "dept_id"
+  end
 
   create_table "responses", force: true do |t|
     t.datetime "responsed_detetime"
@@ -32,8 +36,16 @@ ActiveRecord::Schema.define(version: 20150115020736) do
     t.text     "contents"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "inquiry_id"
   end
 
   add_index "responses", ["User_id"], name: "index_responses_on_User_id"
+
+  create_table "users", force: true do |t|
+    t.string   "code"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

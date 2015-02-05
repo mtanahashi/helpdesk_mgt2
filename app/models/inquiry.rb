@@ -1,4 +1,5 @@
 class Inquiry < ActiveRecord::Base
-  belongs_to :User
-  belongs_to :Dept
+  belongs_to :user
+  belongs_to :dept
+  has_many :responses
 end
