@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   resources :responses
 
-  root to:redirect('/inquiries')
+#  root to: "home#index"
+  root to: redirect('/iquiries')
+  
   resources :inquiries
 
   # The priority is based upon order of creation: first created -> highest priority.

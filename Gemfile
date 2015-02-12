@@ -46,3 +46,4 @@ gem 'spring',        group: :development
 
 # I18nのgemを追加する
 gem "i18n_generators", :group => :development
+gem 'devise'
